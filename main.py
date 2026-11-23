@@ -5,11 +5,13 @@ import pandas
 
 def set_elements():
     #Prompt user for elements of the first set
-    setA = input("Enter the element of the first set separated by commas: ")
-    setA = set(setA.split(","))
+    setA = input("Enter the elements of the first set separated by commas: ")
+    setA = {int(item.strip()) for item in setA.split(",")}
     print("The elements of the first set (set A) are: ", setA)
     
     #Prompt users for elements of the second set
     setB = input("Enter the elements of the second set separated by commas: ")
-    setB = set(setB.split(","))
+    setB = {int(item.strip()) for item in setB.split(",")}
     print("The elements of the second set (set B) are: ", setB)
+
+set_elements()
